@@ -14,6 +14,13 @@ import { CoursesService } from '../courses.service';
     {{ course }}
     </li>
   </ul>
+  <br />
+  <h2>List of Authors</h2>
+  <ul>
+    <li *ngFor="let author of authors">
+    {{author}}
+    </li>
+  </ul>
   `
 })
 
@@ -23,9 +30,13 @@ export class CourseComponent {
   
   title = "List of courses";
   courses;
+  authors;
 
   constructor( service: CoursesService ) { 
     this.courses = service.getCourses();
+    //this.authors = service.getAuthors();
+    this.authors = service.getAuthors();
+    
   }
 
   getTitle(){

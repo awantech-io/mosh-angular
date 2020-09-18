@@ -13,5 +13,7 @@ export class CoursesService {
     return ['course1', 'course3', 'course3'];
   }
 
-  
+  getAuthors(){
+    return ['author1', 'author2', 'author3'];
+  }
 }
